@@ -4,10 +4,6 @@
   <% if current_user.admin == true %>
 
      <p>
-       <%= f.label "Username:" %> <br />
-       <%=h @holiday.user.username %>
-     </p>
-     <p>
        <%= f.label :number_of_days %> <br />
        <%=h @holiday.number_of_days %>
      </p>
