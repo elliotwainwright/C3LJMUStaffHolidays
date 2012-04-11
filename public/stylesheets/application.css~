@@ -134,16 +134,17 @@ margin: 2px;
 
 #hols {
   text-align: center;
-  width: 100%;
+  width: 70%;
+  margin: auto;
 }
 
 #hols td {
-  border-right: dashed 2px #CECECE;
+  border-right: solid 1px #CECECE;
 } 
 
 #hols td:first-child {
-  border-left: dashed 2px #CECECE;
-  border-right: dashed 2px #CECECE;
+  border-left: solid 1px #CECECE;
+  border-right: solid 1px #CECECE;
 } 
 
 #backbutton {
@@ -217,5 +218,5 @@ td.emphasis {
 position:fixed;
 z-index: 1000;
 right: 40px;
-bottom: 5px;
+bottom: 4px;
 }

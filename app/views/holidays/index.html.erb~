@@ -3,33 +3,36 @@
 <script type="text/javascript" src="/javascripts/prototype.js"> </script>
 <script type="text/javascript" src="/javascripts/window.js"> </script>
 
-<p><%= link_to "New Holidays", new_holiday_path %></p>
+<p><%= link_to "Submit New Holiday Request", new_holiday_path %></p>
 <hr>
 <br>
 <table id="hols">
         <tr>
 			      <th>Username</th>
 			      <th>Number of Days</th>
-			      <th>Date From</th>
-			      <th>Date To</th>
 			      <th>Approved</th>
 			  </tr>
-        <% for holiday in @holidays %>
+        <% @holidays.each do |holiday| %>
 				<tr>
 				  <td><%= link_to holiday.user.username, holiday %></td>
 				  <td><%= holiday.number_of_days %></td>
-				  <td><%= holiday.date_from %></td>
-				  <td><%= holiday.date_to %></td>
 				  <td><%= holiday.approved %></td>
-				        <td><%= link_to "X", holiday, :confirm => 'Are you sure?', :method => :delete %></td>
 				</tr>
-				<% end %>
-
+				<% end %>		  
 </table>
 
+<p id="add_link"><%= link_to_function("New Holiday", new_holiday_path)%></p>
+<div id="add_subject" style="display:none;">
+<% form_remote_tag(:url => {:action => 'create'},
+    :update => "holidays", :position => :bottom,
+    :html => {:id => '_form'}) do %>
+Name: <%= text_field "subject", "name" %>
+<%= submit_tag 'Add' %>
+<% end %>
+</div>
 <br>
 <hr>
 <p><%= link_to "New Holiday", new_holiday_path %></p>
-<p><a id="rss" href="/holidays.atom" rel="alternate" title="ATOM" type="application/atom+xml" /><img src="/images/rss.gif"></img></a><p>
+<p><a id="rss" href="/holidays.atom" rel="alternate" title="ATOM" type="application/atom+xml" /><img src="/images/rss.png"></img></a><p>
 
 			 
