@@ -4,10 +4,6 @@
   <% if current_user.admin == true %>
 
      <p>
-       <%= f.label "Username:" %> <br />
-       <%=h @holiday.user.username %>
-     </p>
-     <p>
        <%= f.label :number_of_days %> <br />
        <%=h @holiday.number_of_days %>
      </p>
@@ -58,8 +54,12 @@
   <hr>
 
   <div id="nextsixmonths">
-     <div class="cal"><%= calendar :year => @holiday.date_from.year, :month => @holiday.date_from.month, :d => @holiday.date_from.day %></div>
-     <div class="cal"><%= calendar :year => @holiday.date_to.year, :month => @holiday.date_to.month, :d => @holiday.date_to.day %></div>
+     <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month %></div>
+  <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month+1 %></div>
+  <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month+2 %></div>
+  <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month+3 %></div>
+  <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month+4 %></div>
+  <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month+5 %></div>
 
   </div>
 <% end %>

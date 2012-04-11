@@ -21,15 +21,6 @@
 				<% end %>		  
 </table>
 
-<p id="add_link"><%= link_to_function("New Holiday", new_holiday_path)%></p>
-<div id="add_subject" style="display:none;">
-<% form_remote_tag(:url => {:action => 'create'},
-    :update => "holidays", :position => :bottom,
-    :html => {:id => '_form'}) do %>
-Name: <%= text_field "subject", "name" %>
-<%= submit_tag 'Add' %>
-<% end %>
-</div>
 <br>
 <hr>
 <p><%= link_to "New Holiday", new_holiday_path %></p>
