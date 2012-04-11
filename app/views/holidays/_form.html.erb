@@ -1,0 +1,68 @@
+<% form_for @holiday, :html => { :multipart => true } do |f| -%>
+  <%= f.error_messages %>
+  
+  <% if current_user.admin == true %>
+
+     <p>
+       <%= f.label "Username:" %> <br />
+       <%=h @holiday.user.username %>
+     </p>
+     <p>
+       <%= f.label :number_of_days %> <br />
+       <%=h @holiday.number_of_days %>
+     </p>
+     <p>
+       <%= f.label :date_from %><br />
+       <%=h @holiday.date_from %>
+     </p>
+     <p>
+       <%= f.label :date_to %> <br />
+       <%=h @holiday.date_to %>
+     </p>
+     <p>
+       <%= f.label "Do you approve this holiday request?:" %> <br />
+       <%= f.check_box(:approved) %> <br />
+       <%= f.label "(Tick to approve)" %>
+     </p>
+ 
+  <% else %>
+ 
+     <p>
+       <%= f.label :number_of_days %><br />
+       <%= f.text_field :number_of_days %>
+     </p> 
+     <p>
+       <%= f.label :date_from %><br />
+       <%= f.date_select :date_from %>
+     </p>
+     <p>
+       <%= f.label :date_to %><br />
+       <%= f.date_select :date_to %>
+     </p>
+     <p>
+     <hr>
+       <%= f.label :photo %><br />
+       <%= f.file_field :photo %>
+     <hr>
+       <%= f.label "Approved by holiday Administrator?:" %> <br />
+       <%=h @holiday.approved %></td>
+  
+  <% end %>
+
+  <hr>
+  
+  <p>
+     <%= f.submit %>
+  </p>
+  
+  <hr>
+  
+  <div id="nextsixmonths">
+     <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month %></div>
+     <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month+1 %></div>
+     <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month+2 %></div>
+     <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month+3 %></div>
+     <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month+4 %></div>
+     <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month+5 %></div>
+  </div>
+<% end %>

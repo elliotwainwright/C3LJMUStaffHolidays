@@ -1,0 +1,35 @@
+<% title "LJMU Staff Holiday Booking System" %>
+
+<script type="text/javascript" src="/javascripts/prototype.js"> </script>
+<script type="text/javascript" src="/javascripts/window.js"> </script>
+
+<p><%= link_to "New Holidays", new_holiday_path %></p>
+<hr>
+<br>
+<table id="hols">
+        <tr>
+			      <th>Username</th>
+			      <th>Number of Days</th>
+			      <th>Date From</th>
+			      <th>Date To</th>
+			      <th>Approved</th>
+			  </tr>
+        <% for holiday in @holidays %>
+				<tr>
+				  <td><%= link_to holiday.user.username, holiday %></td>
+				  <td><%= holiday.number_of_days %></td>
+				  <td><%= holiday.date_from %></td>
+				  <td><%= holiday.date_to %></td>
+				  <td><%= holiday.approved %></td>
+				        <td><%= link_to "X", holiday, :confirm => 'Are you sure?', :method => :delete %></td>
+				</tr>
+				<% end %>
+
+</table>
+
+<br>
+<hr>
+<p><%= link_to "New Holiday", new_holiday_path %></p>
+<p><a id="rss" href="/holidays.atom" rel="alternate" title="ATOM" type="application/atom+xml" /><img src="/images/rss.png"></img></a><p>
+
+			 

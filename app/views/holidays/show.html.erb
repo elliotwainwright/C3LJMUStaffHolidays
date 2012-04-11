@@ -1,0 +1,51 @@
+<% title "Holiday Booking Details" %>
+<% if current_user.id == @holiday.user_id or current_user.admin == true %>
+
+<table>
+<tr>
+<td class="emphasis">User:</td>
+<td><%=h @holiday.user.username %></td>
+</tr>
+<tr>
+<td class="emphasis">Number of Days:</td>
+<td><%=h @holiday.number_of_days %></td>
+</tr>
+<tr>
+<td class="emphasis">Date From:</td>
+<td><%=h @holiday.date_from %></td>
+</tr>
+<tr>
+<tr>
+<td class="emphasis">Date To:</td>
+<td><%=h @holiday.date_to %></td>
+
+<tr>
+<td class="emphasis">Approved?</td>
+<td><%=h @holiday.approved %></td>
+</tr>
+</table>
+
+<hr>
+	<p>Your Holiday Photo:</p>
+		<% if @holiday.photo.file? %>
+		  <%= image_tag @holiday.photo.url(:small) %>
+		<% else %>
+		  <p>No Photo available!</p>
+		<% end %>
+		<h5><hr></h5>
+		
+<p>
+  <%= link_to "Edit", edit_holiday_path(@holiday) %> |
+  <%= link_to "Destroy", @holiday, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", holidays_path %>
+</p>
+
+    <% else %>
+    <p>You do not have access to this record</p>
+    <p>
+    <hr>
+    </p>
+    <%= link_to "ClicK Here to Go Back to List of All Holiday Requests", holidays_path %>
+    <br>
+    <br>
+    <% end %>

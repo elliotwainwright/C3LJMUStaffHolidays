@@ -1,0 +1,9 @@
+one:
+  date_from: 2012-01-19
+  number_of_days: 1.5
+  date_to: 2012-01-19
+
+two:
+  date_from: 2012-01-19
+  number_of_days: 1.5
+  date_to: 2012-01-19

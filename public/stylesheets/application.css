@@ -1,0 +1,221 @@
+body {
+  background-color: #FFF;
+  font-family: Helvetica, Arial;
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+  background-image:url('/images/ljmulogo.jpg');
+}
+
+img.ljmulogo {
+   position: absolute;
+   top: 12px;
+   left: 12px;
+   border: inset 1px #666;
+}
+
+img.ljmucloud {
+   position: absolute;
+   top: 12px;
+   left: 124px;
+   border: inset 1px #666;
+}
+
+img.ljmucompass {
+   position: absolute;
+   top: 12px;
+   left: 236px;
+   border: inset 1px #666;
+}
+
+img.ljmutrophy {
+   position: absolute;
+   top: 12px;
+   left: 348px;
+   border: inset 1px #666;
+}
+
+a img {
+  border: none;
+}
+
+a {
+  color: #234D53;
+}
+
+a:hover {
+  color: #000;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #4B7377;
+  height: 75px;
+  padding: 30px;
+  margin-bottom: 25px;
+  border-bottom: solid 1px #FFF;
+}
+
+.footer 
+{
+	width: 100%;
+	border-top: 1px #FFFFFF solid;
+	background-color: #333333;
+	height: 39px;
+	bottom: 0px;
+	padding: 20px;
+	position: fixed;
+	margin-top: 35px;
+	text-align: center;
+}
+
+.credits a
+{
+	color: #ABABAB;
+	text-decoration:none;
+	font-family: Helvetica, Arial;
+  font-size: 18px;
+}
+
+.credits a:hover
+{
+	color: #FEFEFE;
+	text-decoration:none;
+}
+
+div.logoutorin {
+  float: right;
+  padding: 5px;
+  margin: 0;
+  font-family: Helvetica, Arial;
+  font-size: 24px;
+}
+
+div.logoutorin a {
+  color: #AAA;
+  text-decoration:none;
+}
+
+div.logoutorin a:hover {
+  color: #EEE;
+}
+
+#container {
+  width: 60%;
+  margin: auto;
+  background-color: #FEFEFE;
+  padding: 0px 40px;
+  border: inset 2px #CECECE;
+  color: #234D53;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+#container h1 {
+  color: #4B7377;
+  font-family: Helvetica, Arial;
+  font-size: 40px;
+}
+
+#nextsixmonths {
+width:100%;
+margin:auto;
+}
+
+.cal {
+float:left;
+margin: 2px;
+}
+
+#hols {
+  text-align: center;
+  width: 100%;
+}
+
+#hols td {
+  border-right: dashed 2px #CECECE;
+} 
+
+#hols td:first-child {
+  border-left: dashed 2px #CECECE;
+  border-right: dashed 2px #CECECE;
+} 
+
+#backbutton {
+clear:both;
+}
+
+td.emphasis {
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+#flash_notice, #flash_error {
+  position: absolute;
+  top: 80px;
+  right: 38px;
+  padding: 0px;
+  font-family: Helvetica, Arial;
+  font-size: 24px;
+
+}
+
+#flash_notice {
+  background-color: #4B7377;
+  color: #FC9E40;
+}
+
+#flash_error {
+  background-color: #c5344a;
+  color: #000;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #F0F0F0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 8px;
+}
+
+#errorExplanation ul {
+  margin: 2px 24px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+}
+
+#rss {
+position:fixed;
+z-index: 1000;
+right: 40px;
+bottom: 4px;
+}
