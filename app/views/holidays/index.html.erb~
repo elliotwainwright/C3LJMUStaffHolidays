@@ -6,6 +6,7 @@
 <p><%= link_to "Submit New Holiday Request", new_holiday_path %></p>
 <hr>
 <br>
+<div di="hold">
 <table id="hols">
         <tr>
 			      <th>Username</th>
@@ -20,10 +21,16 @@
 				</tr>
 				<% end %>		  
 </table>
+</div>
+
+<p id="new"><%= link_to_function("New Hol", "Element.remove('new'); Element.show('new_hol_form')")%></p>
+<div id="new_hol_form" style="display:none;">
+<%= render :partial => 'form' %>
+</div>
 
 <br>
 <hr>
-<p><%= link_to "New Holiday", new_holiday_path %></p>
+<p><%= link_to "Submit New Holiday Request", new_holiday_path %></p>
 <p><a id="rss" href="/holidays.atom" rel="alternate" title="ATOM" type="application/atom+xml" /><img src="/images/rss.png"></img></a><p>
 
 			 

@@ -1,4 +1,4 @@
-<% form_for @holiday, :html => { :multipart => true } do |f| -%>
+<% form_for @holiday, :html => { :multipart => true } do |f| - %>
   <%= f.error_messages %>
   
   <% if current_user.admin == true %>
@@ -55,11 +55,10 @@
 
   <div id="nextsixmonths">
      <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month %></div>
-  <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month+1 %></div>
-  <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month+2 %></div>
-  <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month+3 %></div>
-  <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month+4 %></div>
-  <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month+5 %></div>
-
+     <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month+1 %></div>
+     <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month+2 %></div>
+     <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month+3 %></div>
+     <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month+4 %></div>
+     <div class="cal"><%= calendar :year => Time.now.year, :month => Time.now.month+5 %></div>
   </div>
 <% end %>
