@@ -1,21 +1,24 @@
 class HolidaysController < ApplicationController
   def index
-    @holiday = Holiday.all
+ if current_user.admin == true
     respond_to do |format|
       format.html # Send the page using HTML
       format.xml { render :xml => @holidays } # Send the page using XML
       format.atom
       format.js { render :partial => @holidays }
+      @holidays = Holiday.all.paginate(:page => params[:page], :per_page => 8)  
     end
+        else
+            respond_to do |format|
+      format.html # Send the page using HTML
+      format.xml { render :xml => @holidays } # Send the page using XML
+      format.atom
+      format.js { render :partial => @holidays }
+      @holidays = Holiday.find_all_by_user_id(current_user.id).paginate(:page => params[:page], :per_page => 8) 
+      end
   end
-  
-  def index
-    if current_user.admin == true
-      @holidays = Holiday.all
-    else
-      @holidays = Holiday.find_all_by_user_id(current_user.id)
-    end
-  end
+end
+
   
   def show
     @holiday = Holiday.find(params[:id])
@@ -57,3 +60,4 @@ class HolidaysController < ApplicationController
     redirect_to holidays_url
   end
 end
+

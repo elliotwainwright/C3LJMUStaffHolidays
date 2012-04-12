@@ -30,7 +30,11 @@
 		<% if @holiday.photo.file? %>
 		  <%= image_tag @holiday.photo.url(:small) %>
 		<% else %>
+		 <% if current_user.admin == true %>
+		 <p>User has not uploaded a photo yet</p>
+		 <% else %>
 		  <p>Please upload a photo!</p>
+		  <% end %>
 		<% end %>
 		<h5><hr></h5>
 		

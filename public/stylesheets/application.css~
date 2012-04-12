@@ -138,13 +138,17 @@ margin: 2px;
   margin: auto;
 }
 
+#hols th {
+  width
+}
+
 #hols td {
-  border-right: solid 1px #CECECE;
+  border-right: dashed 1px #CECECE;
 } 
 
 #hols td:first-child {
-  border-left: solid 1px #CECECE;
-  border-right: solid 1px #CECECE;
+  border-left: dashed 1px #CECECE;
+  border-right: dashed 1px #CECECE;
 } 
 
 #backbutton {
@@ -220,3 +224,36 @@ z-index: 1000;
 right: 40px;
 bottom: 4px;
 }
+
+div.pagination {
+		padding: 3px;
+		margin-top: 20px;
+		text-align:center;
+	}
+	
+	div.pagination a {
+		padding: 2px 5px 2px 5px;
+		margin: 2px;
+		border: 1px solid #4B7377;
+		text-decoration: none;
+		color: #4B7377;
+	}
+	div.pagination a:hover, div.digg a:active {
+		border: 1px solid #FC9E40;
+		color: #FC9E40;
+		
+	}
+	div.pagination span.current {
+		padding: 2px 5px 2px 5px;
+		margin: 2px;
+		border: 1px solid #4B7377;
+		font-weight: bold;
+		background-color: #4B7377;
+		color: #FFF;
+	}
+	div.pagination span.disabled {
+		padding: 2px 5px 2px 5px;
+		margin: 2px;
+		border: 1px solid #999;
+		color: #999;
+	}

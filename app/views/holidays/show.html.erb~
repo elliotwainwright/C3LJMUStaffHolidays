@@ -25,11 +25,16 @@
 </tr>
 </table>
 
+<hr>
 	<p>Your Holiday Photo:</p>
 		<% if @holiday.photo.file? %>
 		  <%= image_tag @holiday.photo.url(:small) %>
 		<% else %>
-		  <p>No Photo available!</p>
+		 <% if current_user.admin == true %>
+		 <p>User has not uploaded a photo yet %>
+		 <% else %>
+		  <p>Please upload a photo!</p>
+		  <% end %>
 		<% end %>
 		<h5><hr></h5>
 		
