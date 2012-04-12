@@ -5,8 +5,8 @@
 <script type="text/javascript" src="/javascripts/prototype.js"> </script>
 <script type="text/javascript" src="/javascripts/window.js"> </script>
 
-<% if current_user.admin == false %>
-<br>
+<% if current_user.admin == true %>
+<p>Click on one of the Usernames below to see more details of the holiday request and to approve holidays.</p>
 <% else %>
 <p><%=h link_to "Submit New Holiday Request", new_holiday_path %></p>
 <% end %>
@@ -21,12 +21,10 @@
 			      <th>Approved?</th>
 			  </tr>
 			  <% for holiday in @holidays %>
-
 				<tr>
 				  <td><%= link_to holiday.user.username, holiday %></td>
 				  <td><%= holiday.number_of_days %></td>
 				  <td><%= holiday.approved %></td>
-          <td><%= link_to "Edit", edit_holiday_path(holiday) %></td>
 				</tr>
 				<% end %>		 
 				 

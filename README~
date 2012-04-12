@@ -1,0 +1,60 @@
+Name:       Elliot Wainwright
+Student ID: 388168
+Module Name:Internet and Open Source Web Programming
+Module Code:6108ENG
+Assignmen:  C3 - Advanced Rails Web Application to Manage Staff Holiday Requests
+
+Login Details ------------------------------------------------------------------
+
+Admin Username: admin
+Admin Password: admin
+
+Username: mylene_howell
+Password: test
+
+Username: chadrick
+Password: test
+(this user has 9 holiday requests assigned to them and so pa
+Username: marcos.green
+Password: test
+
+Username: danika_hettinger
+Password: test
+
+Username: stephon_mohr
+Password: test
+
+Username: skyla_cremin
+Password: test
+
+Username: pascale
+Password: test
+
+Username: helene_cassin
+Password: test
+
+Username: conner.williamson
+Password: test
+
+Username: vinnie_schulist
+Password: test
+
+Username: mylene_howell
+Password: test
+
+
+In the work directory of this repository is where the workflow map and database schema's are stored. These include both original Balsamiq files, both PNG files of the mock ups and both PDF's of the mock up. The names of these files are as follows:
+
+Workflow Map Balsamiq - workflowapp.bmml
+Workflow Map PNG - workflowapp.ong
+Workflow Map PDF - leerobinsonljmuholidayworkflowmap.pdf
+
+Database Schema Balsamiq - ljmuholidaydatabaseschema.bmml
+Database Schema PNG - ljmuholidaydatabaseschema.png
+Database Schema PDF - leerobinsonljmuholidaydatabaseschema.pdf
+
+The database schema stores the information about both tables (holidays and users). The holidays table and users table are related through the user_id which is initialized when a user is created.
+
+The workflow map shows the navigation and abilities of the users/admin which are possible to them. This will highlight the differences in option the users and admin have in different scenarios using different coloured arrows and highlighting certain areas. For the benefit of the reader the red arrows are actions that all users can do, the green is what the admin will see only, the blue is the users only and the orange is the current user and the admin. 
+
+Flash messages display on certain events such as new user being created, new holiday request and so on. These are a way of informing the user that an event has occurred rather than having a user wonder if something has happened.
