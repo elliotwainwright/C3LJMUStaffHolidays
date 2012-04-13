@@ -139,7 +139,7 @@ margin: 2px;
 }
 
 #hols th {
-  width
+  width:33%;
 }
 
 #hols td {
@@ -224,7 +224,6 @@ z-index: 1000;
 right: 40px;
 bottom: 4px;
 }
-
 div.pagination {
 		padding: 3px;
 		margin-top: 20px;
@@ -257,3 +256,4 @@ div.pagination {
 		border: 1px solid #999;
 		color: #999;
 	}
+

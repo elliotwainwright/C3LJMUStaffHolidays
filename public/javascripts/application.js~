@@ -1,20 +1,23 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
-function mod1()
+var UnobtrusiveLinker = Class.create({
 
-{
-Dialog.alert({url: "elliotwainwright.com/index.html", options: {method: 'get'}}, 
-            {className: "alphacube", width:540, okLabel: "Close"});
-}
+  initialize: function() {
+    this.options = Object.extend({
+      container: 'container',
+      selector: 'div.pagination a'
+    }, arguments[0] || {});
+    this.initLinks();
+  },
 
-function popup(mylink, windowname)
-{
-if (! window.focus)return true;
-var href;
-if (typeof(mylink) == 'string')
-   href=mylink;
-else
-   href=mylink.href;
-window.open(href, windowname, 'width=400,height=200,scrollbars=yes');
-return false;
-}
+  initLinks: function() {
+    $(this.options.container).select(this.options.selector).invoke('observe', 'click', this.linkHandler.bind(this));
+  },
+
+  linkHandler: function(event) {
+    event.stop();
+    new Ajax.Updater(this.options.container, event.element().getAttribute('href'),{
+      method: 'get',
+      onComplete: this.initLinks.bind(this)
+    });
+  }
+
+});
