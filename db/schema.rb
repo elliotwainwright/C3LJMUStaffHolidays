@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120410173936) do
+ActiveRecord::Schema.define(:version => 20120415154251) do
 
   create_table "holidays", :force => true do |t|
     t.date     "date_from"
@@ -33,6 +33,12 @@ ActiveRecord::Schema.define(:version => 20120410173936) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "admin"
+  end
+
+  create_table "votes", :force => true do |t|
+    t.integer  "holiday_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

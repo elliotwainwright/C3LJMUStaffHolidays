@@ -59,5 +59,9 @@ class HolidaysController < ApplicationController
     flash[:notice] = "Holiday Booking Successfully Removed"
     redirect_to holidays_url
   end
+  
+  def ajaxdestroy
+    Holiday.find(@params[:id]).destroy
+    render :partial => "bookmarks"
+  end
 end
-

@@ -44,7 +44,7 @@ a {
 }
 
 a:hover {
-  color: #000;
+  color: #DD7D00;
 }
 
 .clear {
@@ -105,7 +105,7 @@ div.logoutorin a:hover {
   color: #EEE;
 }
 
-#container {
+#holder {
   width: 60%;
   margin: auto;
   background-color: #FEFEFE;
@@ -116,7 +116,7 @@ div.logoutorin a:hover {
   margin-bottom: 100px;
 }
 
-#container h1 {
+#holder h1 {
   color: #4B7377;
   font-family: Helvetica, Arial;
   font-size: 40px;
@@ -136,10 +136,12 @@ margin: 2px;
   text-align: center;
   width: 70%;
   margin: auto;
+  color: #4b7377;
 }
 
 #hols th {
   width:33%;
+  color: #174347;
 }
 
 #hols td {
@@ -172,7 +174,7 @@ td.emphasis {
 
 #flash_notice {
   background-color: #4B7377;
-  color: #FC9E40;
+  color: #DD7D00;
 }
 
 #flash_error {
@@ -219,41 +221,52 @@ td.emphasis {
 }
 
 #rss {
-position:fixed;
-z-index: 1000;
-right: 40px;
-bottom: 4px;
+  position:fixed;
+  z-index: 1000;
+  right: 40px;
+  bottom: 4px;
 }
-div.pagination {
-		padding: 3px;
-		margin-top: 20px;
-		text-align:center;
-	}
-	
-	div.pagination a {
-		padding: 2px 5px 2px 5px;
-		margin: 2px;
-		border: 1px solid #4B7377;
-		text-decoration: none;
-		color: #4B7377;
-	}
-	div.pagination a:hover, div.digg a:active {
-		border: 1px solid #FC9E40;
-		color: #FC9E40;
-		
-	}
-	div.pagination span.current {
-		padding: 2px 5px 2px 5px;
-		margin: 2px;
-		border: 1px solid #4B7377;
-		font-weight: bold;
-		background-color: #4B7377;
-		color: #FFF;
-	}
-	div.pagination span.disabled {
-		padding: 2px 5px 2px 5px;
-		margin: 2px;
-		border: 1px solid #999;
-		color: #999;
-	}
 
+div.pagination {
+  padding: 3px;
+	margin-top: 20px;
+	text-align:center;
+}
+	
+div.pagination a {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #4B7377;
+	text-decoration: none;
+	color: #4B7377;
+}
+
+div.pagination a:hover, div.digg a:active {
+	border: 1px solid ;
+	color: #DD7D00;
+}
+
+div.pagination span.current {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #4B7377;
+	font-weight: bold;
+	background-color: #4B7377;
+	color: #FFF;
+}
+
+div.pagination span.disabled {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #999;
+	color: #999;
+}
+	
+#info {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#info b{
+  color: #DD7D00;
+}

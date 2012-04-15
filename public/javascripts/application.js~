@@ -21,3 +21,4 @@ var UnobtrusiveLinker = Class.create({
   }
 
 });
+

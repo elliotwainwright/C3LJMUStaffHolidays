@@ -2,7 +2,7 @@ var UnobtrusiveLinker = Class.create({
 
   initialize: function() {
     this.options = Object.extend({
-      container: 'container2',
+      container: 'pagination_container',
       selector: 'div.pagination a'
     }, arguments[0] || {});
     this.initLinks();
@@ -21,3 +21,4 @@ var UnobtrusiveLinker = Class.create({
   }
 
 });
+

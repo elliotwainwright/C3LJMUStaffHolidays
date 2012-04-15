@@ -60,4 +60,3 @@ class HolidaysController < ApplicationController
     redirect_to holidays_url
   end
 end
-

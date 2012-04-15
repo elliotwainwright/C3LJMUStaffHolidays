@@ -22,6 +22,9 @@
 <tr>
 <td class="emphasis">Approved?</td>
 <td><%=h @holiday.approved %></td>
+<td><span id="vote_score">Score: <%= @recipe.votes.size %></td>
+</span>
+
 </tr>
 </table>
 
@@ -31,7 +34,7 @@
 		  <%= image_tag @holiday.photo.url(:small) %>
 		<% else %>
 		 <% if current_user.admin == true %>
-		 <p>User has not uploaded a photo yet %>
+		 <p>User has not uploaded a photo yet</p>
 		 <% else %>
 		  <p>Please upload a photo!</p>
 		  <% end %>
@@ -49,6 +52,13 @@
     <p>
     <hr>
     </p>
+    <div id="vote_form">
+<% form_remote_tag :url =>
+holiday_votes_path(@holiday) do %>
+<%= submit_tag 'Vote for Holiday' %>
+<% end %>
+</div>
+
     <%= link_to "ClicK Here to Go Back to List of All Holiday Requests", holidays_path %>
     <br>
     <br>
